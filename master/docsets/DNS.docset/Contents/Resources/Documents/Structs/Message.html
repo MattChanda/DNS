@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           DNS Docs
         </a>
-         (11% documented)
+         (32% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -57,46 +57,44 @@
       <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="../Querying.html">Querying</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/InternetClass.html">InternetClass</a>
+                <a class="nav-group-task-link" href="../Structs/Message.html">Message</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MessageType.html">MessageType</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/OperationCode.html">OperationCode</a>
+                <a class="nav-group-task-link" href="../Querying.html#/s:3DNS13OperationCodea">OperationCode</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/ResourceRecordType.html">ResourceRecordType</a>
+                <a class="nav-group-task-link" href="../Extensions/OperationCode.html">OperationCode</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/ReturnCode.html">ReturnCode</a>
+                <a class="nav-group-task-link" href="../Structs/Question.html">Question</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ReturnCode.html">ReturnCode</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <a class="nav-group-name-link" href="../Resource Record.html">Resource Record</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Functions.html#/s:3DNS8createIPAA0C0_pSgx12networkBytes_ts10CollectionRzs5UInt8V7ElementRtzlF">createIP(networkBytes:)</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/IP.html">IP</a>
-              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/ResourceRecord.html">ResourceRecord</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ResourceRecordType.html">ResourceRecordType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Structs.html">Structs</a>
+            <a class="nav-group-name-link" href="../Resource Record Types.html">Resource Record Types</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/AliasRecord.html">AliasRecord</a>
@@ -105,19 +103,7 @@
                 <a class="nav-group-task-link" href="../Structs/HostRecord.html">HostRecord</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/IPv4.html">IPv4</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/IPv6.html">IPv6</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/Message.html">Message</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/PointerRecord.html">PointerRecord</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/Question.html">Question</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/Record.html">Record</a>
@@ -130,6 +116,23 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Resource Data Types.html">Resource Data Types</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/InternetClass.html">InternetClass</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/IP.html">IP</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/IPv4.html">IPv4</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/IPv6.html">IPv6</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -137,7 +140,44 @@
         <section class="section">
           <div class="section-content">
             <h1>Message</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Message</span></code></pre>
+
+                </div>
+              </div>
+            <p>All communications inside of the domain protocol are carried in a single
+format called a message.  The top level format of message is divided
+into 5 sections (some of which are empty in certain cases) shown below:</p>
+
+<pre class="highlight plaintext"><code>+---------------------+
+|        Header       |
++---------------------+
+|       Question      | the question for the name server
++---------------------+
+|        Answer       | RRs answering the question
++---------------------+
+|      Authority      | RRs pointing toward an authority
++---------------------+
+|      Additional     | RRs holding additional information
++---------------------+
+</code></pre>
+
+<p>The header section is always present.  The header includes fields that
+specify which of the remaining sections are present, and also specify
+whether the message is a query or a response, a standard query or some
+other opcode, etc.</p>
+
+<p>The names of the sections after the header are derived from their use in
+standard queries.  The question section contains fields that describe a
+question to a name server.  These fields are a query type (QTYPE), a
+query class (QCLASS), and a query domain name (QNAME).  The last three
+sections have the same format: a possibly empty list of concatenated
+resource records (RRs).  The answer section contains RRs that answer the
+question; the authority section contains RRs that point toward an
+authoritative name server; the additional records section contains RRs
+which relate to the query, but are not strictly answers for the
+question.</p>
 
           </div>
         </section>
@@ -145,6 +185,13 @@
         <section class="section">
           <div class="section-content">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Message%20header%20section"></a>
+                <a name="//apple_ref/swift/Section/Message header section" class="dashAnchor"></a>
+                <a href="#/Message%20header%20section">
+                  <h3 class="section-name">Message header section</h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -159,8 +206,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A 16 bit identifier assigned by the program that
+generates any kind of query.  This identifier is copied
+the corresponding reply and can be used by the requester
+to match up replies to outstanding queries.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">UInt16</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -178,8 +236,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A one bit field that specifies whether this message is a
+query (0), or a response (1).</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/MessageType.html">MessageType</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -187,9 +254,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3DNS7MessageV13operationCodeAA09OperationD0Ov"></a>
+                    <a name="/s:3DNS7MessageV13operationCodes5UInt8Vv"></a>
                     <a name="//apple_ref/swift/Property/operationCode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS7MessageV13operationCodeAA09OperationD0Ov">operationCode</a>
+                    <a class="token" href="#/s:3DNS7MessageV13operationCodes5UInt8Vv">operationCode</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -197,8 +264,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A four bit field that specifies kind of query in this
+message.  This value is set by the originator of a query
+and copied into the response.  The values are:</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">operationCode</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS13OperationCodea">OperationCode</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -216,8 +293,23 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Authoritative Answer - this bit is valid in responses,
+and specifies that the responding name server is an
+authority for the domain name in question section.</p>
 
+<p>Note that the contents of the answer section may have
+multiple owner names because of aliases.  The AA bit
+corresponds to the name which matches the query name, or
+the first owner name in the answer section.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">authoritativeAnswer</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -235,8 +327,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>TrunCation - specifies that this message was truncated
+due to length greater than that permitted on the
+transmission channel.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">truncation</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -254,8 +356,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Recursion Desired - this bit may be set in a query and
+is copied into the response.  If RD is set, it directs
+the name server to pursue the query recursively.
+Recursive query support is optional.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">recursionDesired</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -273,8 +386,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Recursion Available - this be is set or cleared in a
+response, and denotes whether recursive query support is
+available in the name server.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">recursionAvailable</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -282,9 +405,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3DNS7MessageV10returnCodeAA06ReturnD0Ov"></a>
+                    <a name="/s:3DNS7MessageV10returnCodes5UInt8Vv"></a>
                     <a name="//apple_ref/swift/Property/returnCode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS7MessageV10returnCodeAA06ReturnD0Ov">returnCode</a>
+                    <a class="token" href="#/s:3DNS7MessageV10returnCodes5UInt8Vv">returnCode</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -292,12 +415,32 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Response code - this 4 bit field is set as part of
+responses.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">returnCode</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Other%20sections"></a>
+                <a name="//apple_ref/swift/Section/Other sections" class="dashAnchor"></a>
+                <a href="#/Other%20sections">
+                  <h3 class="section-name">Other sections</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -311,8 +454,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Question section.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">questions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Question.html">Question</a></span><span class="p">]</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -330,8 +481,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Answer section.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">answers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ResourceRecord.html">ResourceRecord</a></span><span class="p">]</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -349,8 +508,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Authority section.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">authorities</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ResourceRecord.html">ResourceRecord</a></span><span class="p">]</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -368,18 +535,37 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Additional records section.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">additional</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ResourceRecord.html">ResourceRecord</a></span><span class="p">]</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializing"></a>
+                <a name="//apple_ref/swift/Section/Initializing" class="dashAnchor"></a>
+                <a href="#/Initializing">
+                  <h3 class="section-name">Initializing</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3DNS7MessageVACs6UInt16V2id_AA0B4TypeO4typeAA13OperationCodeO09operationH0Sb19authoritativeAnswerSb10truncationSb16recursionDesiredSb0M9AvailableAA06ReturnH0O06returnH0SayAA8QuestionVG9questionsSayAA14ResourceRecord_pG7answersAY11authoritiesAY10additionaltcfc"></a>
+                    <a name="/s:3DNS7MessageVACs6UInt16V2id_AA0B4TypeO4types5UInt8V13operationCodeSb19authoritativeAnswerSb10truncationSb16recursionDesiredSb0M9AvailableAK06returnI0SayAA8QuestionVG9questionsSayAA14ResourceRecord_pG7answersAW11authoritiesAW10additionaltcfc"></a>
                     <a name="//apple_ref/swift/Method/init(id:type:operationCode:authoritativeAnswer:truncation:recursionDesired:recursionAvailable:returnCode:questions:answers:authorities:additional:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS7MessageVACs6UInt16V2id_AA0B4TypeO4typeAA13OperationCodeO09operationH0Sb19authoritativeAnswerSb10truncationSb16recursionDesiredSb0M9AvailableAA06ReturnH0O06returnH0SayAA8QuestionVG9questionsSayAA14ResourceRecord_pG7answersAY11authoritiesAY10additionaltcfc">init(id:type:operationCode:authoritativeAnswer:truncation:recursionDesired:recursionAvailable:returnCode:questions:answers:authorities:additional:)</a>
+                    <a class="token" href="#/s:3DNS7MessageVACs6UInt16V2id_AA0B4TypeO4types5UInt8V13operationCodeSb19authoritativeAnswerSb10truncationSb16recursionDesiredSb0M9AvailableAK06returnI0SayAA8QuestionVG9questionsSayAA14ResourceRecord_pG7answersAW11authoritiesAW10additionaltcfc">init(id:type:operationCode:authoritativeAnswer:truncation:recursionDesired:recursionAvailable:returnCode:questions:answers:authorities:additional:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -387,8 +573,196 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Create a <code>Message</code> instance.</p>
 
+<p>To create a query:</p>
+
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">query</span> <span class="o">=</span> <span class="kt">Message</span><span class="p">(</span>
+    <span class="nv">id</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">(</span><span class="nv">extendingOrTruncating</span><span class="p">:</span> <span class="nf">arc4random</span><span class="p">()),</span>
+    <span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">query</span><span class="p">,</span>
+    <span class="nv">questions</span><span class="p">:</span> <span class="p">[</span>
+        <span class="kt">Question</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"apple.com"</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">host</span><span class="p">)</span>
+    <span class="p">])</span>
+</code></pre>
+
+<p>To create a response for this query:</p>
+
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="kt">Message</span><span class="p">(</span>
+    <span class="nv">id</span><span class="p">:</span> <span class="n">query</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">response</span><span class="p">,</span>
+    <span class="nv">returnCode</span><span class="p">:</span> <span class="o">.</span><span class="n">noError</span><span class="p">,</span>
+    <span class="nv">questions</span><span class="p">:</span> <span class="n">query</span><span class="o">.</span><span class="n">questions</span><span class="p">,</span>
+    <span class="nv">answers</span><span class="p">:</span> <span class="p">[</span>
+        <span class="kt">HostRecord</span><span class="o">&lt;</span><span class="kt">IPv4</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"apple.com"</span><span class="p">,</span> <span class="nv">ttl</span><span class="p">:</span> <span class="mi">3600</span><span class="p">,</span> <span class="nv">ip</span><span class="p">:</span> <span class="kt">IPv4</span><span class="p">(</span><span class="s">"17.172.224.47"</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+    <span class="p">])</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+        <span class="nv">id</span><span class="p">:</span> <span class="kt">UInt16</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/MessageType.html">MessageType</a></span><span class="p">,</span>
+        <span class="nv">operationCode</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS13OperationCodea">OperationCode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">query</span><span class="p">,</span>
+        <span class="nv">authoritativeAnswer</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nv">truncation</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nv">recursionDesired</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nv">recursionAvailable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nv">returnCode</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">noError</span><span class="p">,</span>
+        <span class="nv">questions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Question.html">Question</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+        <span class="nv">answers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ResourceRecord.html">ResourceRecord</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+        <span class="nv">authorities</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ResourceRecord.html">ResourceRecord</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+        <span class="nv">additional</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ResourceRecord.html">ResourceRecord</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Serialization"></a>
+                <a name="//apple_ref/swift/Section/Serialization" class="dashAnchor"></a>
+                <a href="#/Serialization">
+                  <h3 class="section-name">Serialization</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3DNS7MessageV12serializeTCP10Foundation4DataVyKF"></a>
+                    <a name="//apple_ref/swift/Method/serializeTCP()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3DNS7MessageV12serializeTCP10Foundation4DataVyKF">serializeTCP()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serialize a <code>Message</code> for sending over TCP.</p>
+
+<p>The DNS TCP format prepends the message size before the actual
+message.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serializeTCP</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3DNS7MessageV9serialize10Foundation4DataVyKF"></a>
+                    <a name="//apple_ref/swift/Method/serialize()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3DNS7MessageV9serialize10Foundation4DataVyKF">serialize()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serialize a <code>Message</code> for sending over UDP.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3DNS7MessageVAC10Foundation4DataV14deserializeTCP_tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(deserializeTCP:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3DNS7MessageVAC10Foundation4DataV14deserializeTCP_tKcfc">init(deserializeTCP:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deserializes a <code>Message</code> from a TCP stream.</p>
+
+<p>The DNS TCP format prepends the message size before the actual
+message.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">deserializeTCP</span> <span class="nv">bytes</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3DNS7MessageVAC10Foundation4DataV11deserialize_tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(deserialize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3DNS7MessageVAC10Foundation4DataV11deserialize_tKcfc">init(deserialize:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deserializes a <code>Message</code> from a UDP stream.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">deserialize</span> <span class="nv">bytes</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -400,70 +774,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3DNS7MessageV4pack10Foundation4DataVyKF"></a>
-                    <a name="//apple_ref/swift/Method/pack()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS7MessageV4pack10Foundation4DataVyKF">pack()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3DNS7MessageVAC10Foundation4DataV9unpackTCP_tKcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(unpackTCP:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS7MessageVAC10Foundation4DataV9unpackTCP_tKcfc">init(unpackTCP:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3DNS7MessageVAC10Foundation4DataV6unpack_tKcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(unpack:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS7MessageVAC10Foundation4DataV6unpack_tKcfc">init(unpack:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:s28CustomDebugStringConvertibleP16debugDescriptionSSv"></a>
+                    <a name="/s:3DNS7MessageV16debugDescriptionSSv"></a>
                     <a name="//apple_ref/swift/Property/debugDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s28CustomDebugStringConvertibleP16debugDescriptionSSv">debugDescription</a>
+                    <a class="token" href="#/s:3DNS7MessageV16debugDescriptionSSv">debugDescription</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -471,7 +784,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A textual representation of this instance, suitable for debugging.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -492,7 +806,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://twitter.com/BoukeHaarsma" target="_blank" rel="external">Bouke Haarsma</a>. All rights reserved. (Last updated: 2017-07-30)</p>
+      <p>&copy; 2017 <a class="link" href="https://twitter.com/BoukeHaarsma" target="_blank" rel="external">Bouke Haarsma</a>. All rights reserved. (Last updated: 2017-10-07)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

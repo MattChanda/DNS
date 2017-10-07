@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>IPv4 Struct Reference</title>
+    <title>ReturnCode Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Struct/IPv4" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/ReturnCode" class="dashAnchor"></a>
 
-    <a title="IPv4 Struct Reference"></a>
+    <a title="ReturnCode Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">DNS Reference</a>
       <img class="carat" src="../img/carat.png" />
-      IPv4 Struct Reference
+      ReturnCode Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -139,22 +139,34 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>IPv4</h1>
-            <p>Undocumented</p>
+            <h1>ReturnCode</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="kt">UInt8</span></code></pre>
 
+                </div>
+              </div>
+            
           </div>
         </section>
 
         <section class="section">
           <div class="section-content">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Basic%20DNS%20(RFC1035)"></a>
+                <a name="//apple_ref/swift/Section/Basic DNS (RFC1035)" class="dashAnchor"></a>
+                <a href="#/Basic%20DNS%20(RFC1035)">
+                  <h3 class="section-name">Basic DNS (RFC1035)</h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3DNS4IPv4V7addressSC7in_addrVv"></a>
-                    <a name="//apple_ref/swift/Property/address" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS4IPv4V7addressSC7in_addrVv">address</a>
+                    <a name="/s:s5UInt8V3DNSE7noErrorABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/noError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE7noErrorABvZ">noError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -162,14 +174,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>IPv4 address in network-byte-order</p>
+                        <p>No error condition.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">address</span><span class="p">:</span> <span class="n">in_addr</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">noError</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// NOERROR</span></code></pre>
 
                         </div>
                       </div>
@@ -179,9 +191,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3DNS4IPv4VACSC7in_addrV7address_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(address:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS4IPv4VACSC7in_addrV7address_tcfc">init(address:)</a>
+                    <a name="/s:s5UInt8V3DNSE11formatErrorABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/formatError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE11formatErrorABvZ">formatError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -189,52 +201,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3DNS4IPv4VACSgSScfc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS4IPv4VACSgSScfc">init(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3DNS4IPv4VACSg10Foundation4DataV12networkBytes_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(networkBytes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS4IPv4VACSg10Foundation4DataV12networkBytes_tcfc">init(networkBytes:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>network order</p>
+                        <p>Format error - he name server was unable to interpret the query.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">networkBytes</span> <span class="nv">bytes</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">formatError</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">// FORMERR</span></code></pre>
 
                         </div>
                       </div>
@@ -244,9 +218,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3DNS4IPv4VACs6UInt32Vcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS4IPv4VACs6UInt32Vcfc">init(_:)</a>
+                    <a name="/s:s5UInt8V3DNSE13serverFailureABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/serverFailure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE13serverFailureABvZ">serverFailure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -254,14 +228,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>host order</p>
+                        <p>Server failure - The name server was unable to process this query due
+to a problem with the name server.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">address</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">serverFailure</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">// SERVFAIL</span></code></pre>
 
                         </div>
                       </div>
@@ -271,9 +246,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3DNS4IPv4V12presentationSSv"></a>
-                    <a name="//apple_ref/swift/Property/presentation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS4IPv4V12presentationSSv">presentation</a>
+                    <a name="/s:s5UInt8V3DNSE17nonExistentDomainABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/nonExistentDomain" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE17nonExistentDomainABvZ">nonExistentDomain</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -281,14 +256,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Format this IPv4 address using common <code>a.b.c.d</code> notation.</p>
+                        <p>Name Error - Meaningful only for responses from an authoritative name
+server, this code signifies that the domain name referenced in the
+query does not exist.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">presentation</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">nonExistentDomain</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">3</span> <span class="c1">// NXDOMAIN</span></code></pre>
 
                         </div>
                       </div>
@@ -298,9 +275,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3DNS2IPP5bytes10Foundation4DataVv"></a>
-                    <a name="//apple_ref/swift/Property/bytes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3DNS2IPP5bytes10Foundation4DataVv">bytes</a>
+                    <a name="/s:s5UInt8V3DNSE14notImplementedABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/notImplemented" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE14notImplementedABvZ">notImplemented</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -308,14 +285,46 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Format this IPv4 address using common <code>a.b.c.d</code> notation.</p>
+                        <p>Not Implemented - The name server does not support the requested kind
+of query.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bytes</span><span class="p">:</span> <span class="kt">Data</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">notImplemented</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">4</span> <span class="c1">// NOTIMPL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s5UInt8V3DNSE12queryRefusedABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/queryRefused" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE12queryRefusedABvZ">queryRefused</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Refused - The name server refuses to perform the specified operation
+for policy reasons.  For example, a name server may not wish to provide
+the information to the particular requester, or a name server may not
+wish to perform a particular operation (e.g., zone transfer) for
+particular data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">queryRefused</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">// REFUSED</span></code></pre>
 
                         </div>
                       </div>
@@ -326,19 +335,19 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Conformance%20to%20%60Hashable%60"></a>
-                <a name="//apple_ref/swift/Section/Conformance to `Hashable`" class="dashAnchor"></a>
-                <a href="#/Conformance%20to%20%60Hashable%60">
-                  <h3 class="section-name">Conformance to `Hashable`</h3>
+                <a name="/DNS%20UPDATE%20(RFC2136)"></a>
+                <a name="//apple_ref/swift/Section/DNS UPDATE (RFC2136)" class="dashAnchor"></a>
+                <a href="#/DNS%20UPDATE%20(RFC2136)">
+                  <h3 class="section-name">DNS UPDATE (RFC2136)</h3>
                 </a>
               </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s9EquatableP2eeoiSbx_xtFZ"></a>
-                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s9EquatableP2eeoiSbx_xtFZ">==(_:_:)</a>
+                    <a name="/s:s5UInt8V3DNSE25nameExistsWhenItShouldNotABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/nameExistsWhenItShouldNot" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE25nameExistsWhenItShouldNotABvZ">nameExistsWhenItShouldNot</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -346,13 +355,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Some name that ought not to exist, does exist.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">IPv4</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">IPv4</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">nameExistsWhenItShouldNot</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">6</span> <span class="c1">// YXDOMAIN</span></code></pre>
 
                         </div>
                       </div>
@@ -362,9 +372,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s8HashableP9hashValueSiv"></a>
-                    <a name="//apple_ref/swift/Property/hashValue" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s8HashableP9hashValueSiv">hashValue</a>
+                    <a name="/s:s5UInt8V3DNSE26rrSetExistsWhenItShouldNotABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/rrSetExistsWhenItShouldNot" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE26rrSetExistsWhenItShouldNotABvZ">rrSetExistsWhenItShouldNot</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -372,36 +382,26 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Some RRset that ought not to exist, does exist.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hashValue</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">rrSetExistsWhenItShouldNot</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">7</span> <span class="c1">// YXRRSET</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Conformance%20to%20%60ExpressibleByIntegerLiteral%60"></a>
-                <a name="//apple_ref/swift/Section/Conformance to `ExpressibleByIntegerLiteral`" class="dashAnchor"></a>
-                <a href="#/Conformance%20to%20%60ExpressibleByIntegerLiteral%60">
-                  <h3 class="section-name">Conformance to `ExpressibleByIntegerLiteral`</h3>
-                </a>
-              </div>
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:s27ExpressibleByIntegerLiteralPx0cD4TypeQz07integerD0_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(integerLiteral:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:s27ExpressibleByIntegerLiteralPx0cD4TypeQz07integerD0_tcfc">init(integerLiteral:)</a>
+                    <a name="/s:s5UInt8V3DNSE28rrSetThatShouldExistDoestNotABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/rrSetThatShouldExistDoestNot" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE28rrSetThatShouldExistDoestNotABvZ">rrSetThatShouldExistDoestNot</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -409,13 +409,69 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Some RRset that ought to exist, does not exist.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">integerLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">rrSetThatShouldExistDoestNot</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">8</span> <span class="c1">// NXRRSET</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s5UInt8V3DNSE29serverNotAuthoritativeForZoneABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/serverNotAuthoritativeForZone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE29serverNotAuthoritativeForZoneABvZ">serverNotAuthoritativeForZone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The server is not authoritative for the zone named in the Zone Section.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">serverNotAuthoritativeForZone</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">9</span> <span class="c1">// NOTAUTH</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s5UInt8V3DNSE22nameNotContainedInZoneABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/nameNotContainedInZone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5UInt8V3DNSE22nameNotContainedInZoneABvZ">nameNotContainedInZone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A name used in the Prerequisite or Update Section is not within the
+zone denoted by the Zone Section.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">nameNotContainedInZone</span><span class="p">:</span> <span class="kt"><a href="../Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a></span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">// NOTZONE</span></code></pre>
 
                         </div>
                       </div>

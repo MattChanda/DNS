@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           DNS Docs
         </a>
-         (11% documented)
+         (32% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -56,46 +56,44 @@
       <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Querying.html">Querying</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/InternetClass.html">InternetClass</a>
+                <a class="nav-group-task-link" href="Structs/Message.html">Message</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MessageType.html">MessageType</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/OperationCode.html">OperationCode</a>
+                <a class="nav-group-task-link" href="Querying.html#/s:3DNS13OperationCodea">OperationCode</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/ResourceRecordType.html">ResourceRecordType</a>
+                <a class="nav-group-task-link" href="Extensions/OperationCode.html">OperationCode</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/ReturnCode.html">ReturnCode</a>
+                <a class="nav-group-task-link" href="Structs/Question.html">Question</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Querying.html#/s:3DNS10ReturnCodea">ReturnCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/ReturnCode.html">ReturnCode</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Functions.html">Functions</a>
+            <a class="nav-group-name-link" href="Resource Record.html">Resource Record</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Functions.html#/s:3DNS8createIPAA0C0_pSgx12networkBytes_ts10CollectionRzs5UInt8V7ElementRtzlF">createIP(networkBytes:)</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/IP.html">IP</a>
-              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/ResourceRecord.html">ResourceRecord</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/ResourceRecordType.html">ResourceRecordType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Structs.html">Structs</a>
+            <a class="nav-group-name-link" href="Resource Record Types.html">Resource Record Types</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/AliasRecord.html">AliasRecord</a>
@@ -104,19 +102,7 @@
                 <a class="nav-group-task-link" href="Structs/HostRecord.html">HostRecord</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Structs/IPv4.html">IPv4</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Structs/IPv6.html">IPv6</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Structs/Message.html">Message</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/PointerRecord.html">PointerRecord</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Structs/Question.html">Question</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/Record.html">Record</a>
@@ -126,6 +112,23 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/TextRecord.html">TextRecord</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Resource Data Types.html">Resource Data Types</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/InternetClass.html">InternetClass</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/IP.html">IP</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/IPv4.html">IPv4</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/IPv6.html">IPv6</a>
               </li>
             </ul>
           </li>
@@ -148,13 +151,13 @@ NetService.</p>
     <span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">query</span><span class="p">,</span>
     <span class="nv">questions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Question</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"apple.com."</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">pointer</span><span class="p">)]</span>
 <span class="p">)</span>
-<span class="k">let</span> <span class="nv">requestData</span> <span class="o">=</span> <span class="k">try</span> <span class="n">request</span><span class="o">.</span><span class="nf">pack</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">requestData</span> <span class="o">=</span> <span class="k">try</span> <span class="n">request</span><span class="o">.</span><span class="nf">serialize</span><span class="p">()</span>
 
 <span class="c1">// Not shown here: send to DNS server over UDP, receive reply.</span>
 
 <span class="c1">// Decoding a message</span>
 <span class="k">let</span> <span class="nv">responseData</span> <span class="o">=</span> <span class="kt">Data</span><span class="p">()</span>
-<span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Message</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">unpack</span><span class="p">:</span> <span class="n">responseData</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Message</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">deserialize</span><span class="p">:</span> <span class="n">responseData</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">answers</span><span class="o">.</span><span class="n">first</span><span class="p">)</span>
 </code></pre>
 <a href='#credits' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='credits'>Credits</h2>
@@ -168,7 +171,7 @@ NetService.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://twitter.com/BoukeHaarsma" target="_blank" rel="external">Bouke Haarsma</a>. All rights reserved. (Last updated: 2017-07-30)</p>
+      <p>&copy; 2017 <a class="link" href="https://twitter.com/BoukeHaarsma" target="_blank" rel="external">Bouke Haarsma</a>. All rights reserved. (Last updated: 2017-10-07)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
